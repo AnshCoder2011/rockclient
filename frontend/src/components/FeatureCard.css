@@ -1,0 +1,64 @@
+.feature-card {
+  position: relative;
+  width: 280px;
+  height: 180px;
+  background: #1a1a1a;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease-in-out;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.feature-card .card-border {
+  position: absolute;
+  inset: 0;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  background: linear-gradient(
+      45deg,
+      rgba(255, 0, 150, 0.6),
+      rgba(0, 150, 255, 0.6)
+    )
+    border-box;
+  mask:
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  transition: 0.4s ease-in-out;
+}
+
+.feature-card:hover .card-border {
+  background: linear-gradient(
+      45deg,
+      rgba(255, 0, 150, 0.9),
+      rgba(0, 150, 255, 0.9)
+    )
+    border-box;
+}
+
+.feature-card .shiny-effect {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 70%
+  );
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.feature-card:hover .shiny-effect {
+  transform: translateX(100%);
+}
+
+.icon-container {
+  font-size: 2rem;
+  color: #ff007f;
+  transition: transform 0.3s ease-in-out;
+}

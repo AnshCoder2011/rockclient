@@ -1,0 +1,4 @@
+background: "#111",
+primary: "#8A2BE2", // Purple
+textLight: "#EAEAEA",
+textDark: "#333",
